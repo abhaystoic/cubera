@@ -1,0 +1,23 @@
+ 1. Sign in - Only for customers
+ 			- Start distinguish between customer and merchants
+ 			- Send the pocket balance as well
+
+ 2. SignUp - ALso Link pockets account  (ICICI REST API)
+ 		   - for roles - merchants and customer
+
+ 3. Get my pocket balace - Store in the DB
+
+ 4. (Screen 8) get merchants list who accepted- Send request to nearby merchant apps and display only the merchants who accepted the requests
+
+
+ 5. Select a merchant from the map- generate a tracking / reference ID
+
+ 6. Generate OTP to be sent to customers
+
+ 7. Merchant will verify OTP sent to customers in step 6
+
+ 8. Rate the merchant
+
+ 9. Debit - From the pocket's account of customer
+
+ 10. Credit to the merchant's account -

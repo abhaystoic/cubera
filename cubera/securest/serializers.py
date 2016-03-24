@@ -1,0 +1,35 @@
+from rest_framework import serializers
+from securest.models import Customers
+from django.core.validators import RegexValidator #For phone number validation
+
+class CustomersSerializer(serializers.Serializer):
+    pk = serializers.IntegerField(read_only=True)
+    username = serializers.CharField(max_length=50)
+    #address = serializers.ForeignKey(Address, blank=True, null=True)
+    first_name = serializers.CharField(max_length=50)
+    middle_name = serializers.CharField(max_length=100)
+    last_name = serializers.CharField(max_length=50)
+    email = serializers.EmailField(max_length=100)
+    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
+    contact = serializers.CharField(validators=[phone_regex], max_length=50) # validators should be a list
+   
+
+    def create(self, validated_data):
+        """
+        Create and return a new `Snippet` instance, given the validated data.
+        """
+        return Customers.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        """
+        Update and return an existing `Snippet` instance, given the validated data.
+        """
+        #instance.address = validated_data.get('address', instance.address)
+        instance.username = validated_data.get('username', instance.username)
+        instance.first_name = validated_data.get('first_name', instance.first_name)
+        instance.middle_name = validated_data.get('middle_name', instance.middle_name)
+        instance.last_name = validated_data.get('last_name', instance.last_name)
+        instance.email = validated_data.get('email', instance.email)
+        instance.contact = validated_data.get('contact', instance.contact)
+        instance.save()
+        return instance

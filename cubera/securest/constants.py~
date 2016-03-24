@@ -1,0 +1,6 @@
+get_token_url = '''http://corporate_bank.mybluemix.net/corporate_banking/mybank/authenticate_client?client_id=mvishvajith@outlook.in&password=ICIC4477'''
+account_details_url = '''http://participant_mapping.mybluemix.net/banking/icicibank/participantmapping?client_id=mvishvajith@outlook.in'''
+check_balance_url = '''http://alphaiciapi2.mybluemix.net/rest/Wallet/getWalletBalance'''
+push_notification_url = '''https://mobile.au-syd.bluemix.net/imfpush/v1/apps/78216be1-fbce-49ba-b900-88067757b921/messages'''
+debit_url = '''http://alphaiciapi2.mybluemix.net/rest/Wallet/debitWalletAmount'''
+credit_url = 

@@ -1,0 +1,7 @@
+cf login -a https://api.au-syd.bluemix.net
+
+cf target -s cubera
+
+cf push --no-start
+
+cf logs securest --recent
