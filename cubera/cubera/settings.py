@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')y64(00*%$8(#3^y*z*d84_*ul1xgxem@n(lj16*z=xt)55t%2'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'cubera',
         'USER': 'admin',
-        'PASSWORD': 'OXKWJLGZKNOOVRAT',
+        'PASSWORD': '',
         'HOST': 'aws-us-east-1-portal.14.dblayer.com', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '10647',         # Set to empty string for default.
     }
@@ -93,7 +93,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'cubera',
         'USER': 'postgres',
-        'PASSWORD': '123',
+        'PASSWORD': '',
         'HOST': 'localhost', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',          # Set to empty string for default.
     }
